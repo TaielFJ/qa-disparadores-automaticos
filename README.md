@@ -19,6 +19,7 @@ Este proyecto permite enviar múltiples mensajes predefinidos a través de Whats
 git clone https://github.com/TaielFJ/qa-disparadores-automaticos.git
 cd qa-disparadores-automaticos
 npm install
+npx install playwright
 ```
 
 ---
