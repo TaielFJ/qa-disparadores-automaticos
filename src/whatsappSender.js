@@ -2,11 +2,9 @@ const { chromium } = require('playwright');
 
 async function cerrarPopupSiExiste(pagina) {
     try {
-         console.log('⏳ Esperando 8 segundos antes de enviar ESC...');
-        await pagina.waitForTimeout(8000);
         console.log('⌨️ Enviando tecla ESC para cerrar el popup...');
         await pagina.keyboard.press('Escape');
-        console.log('✅ Se intentó cerrar el popup con ESC.');
+        console.log('✅ Se cerro el popup con ESC.');
     } catch (e) {
         console.warn('⚠️ No se pudo enviar ESC:', e.message);
     }
@@ -39,7 +37,7 @@ async function enviarMensajes(contactos, delay = 8000) {
         await pagina.waitForTimeout(10000);
     } else {
         console.log('🔓 Sesión activa detectada. Continuando...');
-        await pagina.waitForSelector('div[role="grid"]', { timeout: 30000 });
+        await pagina.waitForSelector('div[role="grid"]', { timeout: 1000000 });
     }
 
 
