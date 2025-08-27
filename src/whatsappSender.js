@@ -51,7 +51,7 @@ async function enviarMensajes(contactos, delay = 8000) {
             const url = `https://web.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
             console.log(`Enviando a ${numero}: "${mensaje}"`);
 
-            await pagina.goto(url, { timeout: 10000 });
+            await pagina.goto(url, { timeout: 30000 });
             await pagina.waitForLoadState('load');
 
             const sendButtonSelector = 'button[aria-label="Enviar"], button[aria-label="Send"]';
